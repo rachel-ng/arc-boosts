@@ -1,0 +1,232 @@
+
+
+/*  share, reply buttons  */
+#docs-titlebar-share-client-button .jfk-button, .docs-grille-gm3 .docos.docs-gm .jfk-button.jfk-button-action {
+  /*
+  font-family: 'Roboto Slab', Google Sans, Roboto, sans-serif !important;
+  font-weight: 400 !important;
+  color: #ffffff !important;
+  */
+  background: color-mix(in srgb, 
+                        var(--arc-palette-focus), 
+                        color-mix(in srgb, var(--arc-palette-foregroundPrimary), var(--arc-palette-foregroundSecondary)))
+    !important;
+  /*
+  color: var(--arc-palette-foregroundPrimary) !important;
+  */
+  color: #ffffff !important;
+}
+.apps-share-sprite {
+  filter: contrast(2) grayscale(1) invert(1) !important;
+  -webkit-filter: contrast(2) grayscale(1) invert(1) !important;
+}
+
+/* cancel button color */
+.docs-grille-gm3 .docos.docs-gm .jfk-button.jfk-button-standard {
+  color: color-mix(in srgb, 
+    var(--arc-palette-foregroundSecondary), 
+    var(--arc-palette-foregroundTertiary)
+  )
+  !important;
+}
+
+/*  edit, comment, join buttons  */
+.docs-grille .jfk-button-hover,
+.docs-grille-gm3 #docs-meet-in-editors-entrypointbutton.goog-flat-menu-button-hover { /* hover */
+  background: color-mix(in srgb,
+                  color-mix(in srgb, 
+                            var(--arc-palette-hover), 
+                            var(--arc-palette-foregroundPrimary)),
+                  #ffffff)
+    !important;
+}
+.docs-grille .jfk-button-focused,
+.docs-grille-gm3 #docs-meet-in-editors-entrypointbutton.goog-flat-menu-button-focused { /* focus */
+  background: color-mix(in srgb,
+                  color-mix(in srgb, 
+                            var(--arc-palette-hover), 
+                            var(--arc-palette-foregroundSecondary)),
+                  #ffffff)
+    !important;
+}
+
+
+/*  TOOLBAR BACKGROUND  */
+.docs-grille-gm3.docs-gm .docs-material #docs-toolbar-wrapper,
+.docs-grille-gm3 .docs-toolbar-more-toolbar,
+.docs-grille-gm3 #docs-align-palette {
+  /*
+  background: color-mix(in srgb,
+                var(--arc-palette-foregroundPrimary),
+                #ffffff)
+    !important;
+  */
+  /*
+
+  */
+  background: var(--arc-palette-foregroundPrimary) !important;
+
+}
+
+/*  TOOLBAR BUTTON  */
+.docs-grille-gm3 #docs-align-palette .goog-toolbar-button, 
+.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-button, 
+.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-combo-button, 
+.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-menu-button, 
+.docs-grille-gm3 .trix-palette .goog-toolbar-menu-button {
+  /*
+  background: color-mix(in srgb,
+                var(--arc-palette-foregroundPrimary) 60%,
+                #ffffff)
+    !important;
+  */
+  background: color-mix(in srgb,
+                var(--arc-palette-foregroundPrimary),
+                var(--arc-palette-foregroundSecondary) 2%
+              )
+    !important;
+
+}
+.docs-grille-gm3 .trix-palette .goog-toolbar-menu-button-hover, 
+.docs-grille-gm3.docs-gm #docs-align-palette .goog-toolbar-button-hover, 
+.docs-grille-gm3.docs-gm .clean-palette .goog-palette-cell-hover, 
+.docs-grille-gm3.docs-gm .docs-main-toolbars .goog-toolbar-button-hover, 
+.docs-grille-gm3.docs-gm .docs-main-toolbars .goog-toolbar-menu-button-hover, 
+.docs-grille-gm3.docs-gm .docs-toolbar-zoom-combobox.goog-toolbar-combo-button-hover
+{ /*  hover  */
+  /*
+  background: color-mix(in srgb,
+                color-mix(in srgb, 
+                  var(--arc-palette-foregroundPrimary), 
+                  var(--arc-palette-foregroundSecondary)
+                ),
+                #ffffff 60%
+              )
+    !important;
+  */
+  background: color-mix(in srgb, 
+                var(--arc-palette-foregroundPrimary), 
+                var(--arc-palette-foregroundSecondary) 20%
+              )
+    !important;
+
+}
+.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-button.goog-toolbar-button-checked, 
+.docs-grille-gm3.docs-gm #docs-align-palette .goog-toolbar-button-checked, 
+.docs-grille-gm3.docs-gm .clean-palette .goog-palette-cell-selected, 
+.docs-grille-gm3.docs-gm .trix-palette .goog-palette-cell-selected 
+{ /* selected */
+  /*
+    background: color-mix(in srgb,
+                var(--arc-palette-foregroundSecondary),
+                #ffffff 60%
+              )
+    !important;
+  */
+  background: color-mix(in srgb,
+                var(--arc-palette-foregroundSecondary),
+                var(--arc-palette-foregroundPrimary) 40%
+              )
+    !important;
+}
+
+/* HIGHLIGHT */
+.docs-gm .goog-menuitem-highlight,
+.docs-gm .goog-menuitem-hover, 
+.docs-gm .goog-control-hover:not(.waffle-filterbox-with-condition),
+.docs-gm .goog-control-open:not(.waffle-filterbox-with-condition),
+.docs-gm .goog-control-focused:not(.waffle-filterbox-with-condition),
+.docs-gm .docs-titlebar-badge-selected
+{
+  background: color-mix(in srgb,
+                color-mix(in srgb, 
+                  var(--arc-palette-foregroundPrimary), 
+                  var(--arc-palette-foregroundSecondary)
+                ),
+                #ffffff 60%
+              )
+    !important;
+}
+
+/* fix document status highlight */
+.docs-grille .docs-titlebar-badge .docs-save-indicator-icon:hover {
+  background: none !important;
+}
+
+/*  HELP TEXTBOX COLOR  */
+.docs-omnibox-input.jfk-textinput {
+  background: color-mix(in srgb,
+                color-mix(in srgb, 
+                  var(--arc-palette-foregroundPrimary), 
+                  var(--arc-palette-foregroundSecondary)
+                ),
+                #ffffff 60%
+              )
+    !important;
+}
+.docs-omnibox-input.jfk-textinput:active, .docs-omnibox-input.jfk-textinput:focus {
+  background: #ffffff !important;
+  box-shadow: 0 1px 6px var(--arc-palette-hover);
+}
+
+/*  comment, show more color  */
+.docs-grille-gm3 .docos-anchoreddocoview.docos-docoview-tesla-conflict:hover .docos-show-more, .docs-grille-gm3 .docos-anchoreddocoview:hover .docos-replyview-first .docos-show-more, 
+.docs-grille-gm3 .docos-anchoreddocoview:hover .docos-show-less, .docs-grille-gm3 .docos-anchoreddocoview:hover .docos-show-more,
+.docs-grille-gm3 .docos-anchoreddocoview .docos-show-less, .docs-grille-gm3 .docos-anchoreddocoview .docos-show-more, .docs-grille-gm3 .docos-replyview-first .docos-show-more,
+.docs-grille-gm3 .docos-anchoreddocoview, .docs-grille-gm3 .docos-anchoreddocoview .docos-anchoredreplyview, .docs-grille-gm3 .docos-anchoreddocoview-input-pane,
+.docs-grille-gm3 .docos-showrepliesbutton-collapsed-internal-container {
+  background: var(--arc-palette-foregroundPrimary) !important;
+}
+/*  link, show more text color  */
+.docs-grille-gm3 .docos-anchoredreplyview .docos-anchoredreplyview-body a,
+.docs-grille-gm3 .docos-show-less, .docs-grille-gm3 .docos-show-more,
+.docs-grille-gm3 .docos-anchoreddocoview.docos-docoview-active .docos-showrepliesbutton-collapsed-internal, .docs-grille-gm3 .docos-anchoreddocoview:hover .docos-showrepliesbutton-collapsed-internal {
+  color: rgba(var(--arc-palette-foregroundTertiary), 0.08);
+  !important;
+}
+
+.docs-grille-gm3 .docos-anchoreddocoview .docos-showrepliesbutton-collapsed-internal:active, 
+.docs-grille-gm3 .docos-anchoreddocoview .docos-showrepliesbutton-collapsed-internal:focus,
+.docs-grille-gm3 .docos-anchoreddocoview .docos-showrepliesbutton-collapsed-internal:hover{
+  background: var(--arc-palette-focus);
+}
+
+/*
+.docs-title-widget {
+  font-family: 'Roboto Slab', Google Sans, Roboto, sans-serif !important;
+  font-weight: 400 !important;
+}
+*/
+
+/*
+.docs-grille-gm3 #docs-align-palette .goog-toolbar-button, .docs-grille-gm3 .docs-main-toolbars .goog-toolbar-button, .docs-grille-gm3 .docs-main-toolbars .goog-toolbar-combo-button, .docs-grille-gm3 .docs-main-toolbars .goog-toolbar-menu-button, .docs-grille-gm3 .trix-palette .goog-toolbar-menu-button {
+  background: color-mix(in srgb,
+                  color-mix(in srgb, 
+                            var(--arc-palette-hover), 
+                            var(--arc-palette-foregroundPrimary)),
+                  #ffffff)
+    !important;
+}
+
+.goog-toolbar-button-hover {
+  background: color-mix(in srgb,
+                  color-mix(in srgb, 
+                            var(--arc-palette-hover), 
+                            var(--arc-palette-foregroundSecondary)),
+                  #ffffff)
+    !important;
+}
+
+.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-button.goog-toolbar-button-checked {
+  background: color-mix(in srgb,
+                  color-mix(in srgb, 
+                            var(--arc-palette-hover), 
+                            var(--arc-palette-foregroundTertiary)),
+                  #ffffff)
+    !important;
+}
+
+
+*/
+
+
