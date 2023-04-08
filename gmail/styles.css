@@ -2,8 +2,8 @@
 .WR .z0>.L3 {
   color: #ffffff !important;
   background: color-mix(in srgb, 
-                        var(--arc-palette-focus), 
-                        color-mix(in srgb, var(--arc-palette-foregroundPrimary), var(--arc-palette-foregroundSecondary))
+      var(--arc-palette-focus), 
+      color-mix(in srgb, var(--arc-palette-foregroundPrimary), var(--arc-palette-foregroundSecondary))
     ) !important;
   background-clip: padding-box;
   border: 3px solid !important; 
