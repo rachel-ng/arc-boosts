@@ -8,7 +8,7 @@
   background-clip: padding-box;
   border: 3px solid !important; 
   border-color: color-mix(in srgb, 
-    #ffffffaa,  s
+    #ffffffaa, 
       color-mix(in srgb, 
         var(--arc-palette-focus), 
         color-mix(in srgb, 
