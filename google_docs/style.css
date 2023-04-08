@@ -1,38 +1,39 @@
-
-
-/*  share, reply buttons  */
-#docs-titlebar-share-client-button .jfk-button, .docs-grille-gm3 .docos.docs-gm .jfk-button.jfk-button-action {
-  /*
+/*  font changes  */
+/* share button 
+#docs-titlebar-share-client-button .jfk-button {
   font-family: 'Roboto Slab', Google Sans, Roboto, sans-serif !important;
   font-weight: 400 !important;
   color: #ffffff !important;
-  */
+}
+*/
+
+/* doc title
+.docs-title-widget {
+  font-family: 'Roboto Slab', Google Sans, Roboto, sans-serif !important;
+  font-weight: 400 !important;
+}
+*/
+
+/*  share button  */
+#docs-titlebar-share-client-button .jfk-button {
   background: color-mix(in srgb, 
-                        var(--arc-palette-focus), 
-                        color-mix(in srgb, var(--arc-palette-foregroundPrimary), var(--arc-palette-foregroundSecondary)))
-    !important;
-  /*
-  color: var(--arc-palette-foregroundPrimary) !important;
-  */
+      var(--arc-palette-focus), 
+      color-mix(in srgb, 
+        var(--arc-palette-foregroundPrimary), 
+        var(--arc-palette-foregroundSecondary)
+      )
+    ) !important;
   color: #ffffff !important;
 }
-.apps-share-sprite {
+.apps-share-sprite { /* invert share icon */
   filter: contrast(2) grayscale(1) invert(1) !important;
   -webkit-filter: contrast(2) grayscale(1) invert(1) !important;
 }
 
-/* cancel button color */
-.docs-grille-gm3 .docos.docs-gm .jfk-button.jfk-button-standard {
-  color: color-mix(in srgb, 
-    var(--arc-palette-foregroundSecondary), 
-    var(--arc-palette-foregroundTertiary)
-  )
-  !important;
-}
-
 /*  edit, comment, join buttons  */
+/* hover */
 .docs-grille .jfk-button-hover,
-.docs-grille-gm3 #docs-meet-in-editors-entrypointbutton.goog-flat-menu-button-hover { /* hover */
+.docs-grille-gm3 #docs-meet-in-editors-entrypointbutton.goog-flat-menu-button-hover { 
   background: color-mix(in srgb,
                   color-mix(in srgb, 
                             var(--arc-palette-hover), 
@@ -40,52 +41,39 @@
                   #ffffff)
     !important;
 }
-.docs-grille .jfk-button-focused,
-.docs-grille-gm3 #docs-meet-in-editors-entrypointbutton.goog-flat-menu-button-focused { /* focus */
+/* focus */
+.docs-grille .jfk-button-focused, 
+.docs-grille-gm3 #docs-meet-in-editors-entrypointbutton.goog-flat-menu-button-focused { 
   background: color-mix(in srgb,
-                  color-mix(in srgb, 
-                            var(--arc-palette-hover), 
-                            var(--arc-palette-foregroundSecondary)),
-                  #ffffff)
-    !important;
+    #ffffff,
+      color-mix(in srgb, 
+        var(--arc-palette-hover), 
+        var(--arc-palette-foregroundSecondary)
+      )
+    ) !important;
 }
 
 
-/*  TOOLBAR BACKGROUND  */
+/*  toolbar  */
+/* background color */
 .docs-grille-gm3.docs-gm .docs-material #docs-toolbar-wrapper,
 .docs-grille-gm3 .docs-toolbar-more-toolbar,
 .docs-grille-gm3 #docs-align-palette {
-  /*
-  background: color-mix(in srgb,
-                var(--arc-palette-foregroundPrimary),
-                #ffffff)
-    !important;
-  */
-  /*
-
-  */
   background: var(--arc-palette-foregroundPrimary) !important;
-
 }
 
-/*  TOOLBAR BUTTON  */
+/* buttons */
 .docs-grille-gm3 #docs-align-palette .goog-toolbar-button, 
 .docs-grille-gm3 .docs-main-toolbars .goog-toolbar-button, 
 .docs-grille-gm3 .docs-main-toolbars .goog-toolbar-combo-button, 
 .docs-grille-gm3 .docs-main-toolbars .goog-toolbar-menu-button, 
-.docs-grille-gm3 .trix-palette .goog-toolbar-menu-button {
-  /*
+.docs-grille-gm3 .docs-toolbar-more-toolbar, 
+.docs-grille-gm3 .trix-palette .goog-toolbar-menu-button,
+.docs-grille-gm3 .trix-palette {
   background: color-mix(in srgb,
-                var(--arc-palette-foregroundPrimary) 60%,
-                #ffffff)
-    !important;
-  */
-  background: color-mix(in srgb,
-                var(--arc-palette-foregroundPrimary),
-                var(--arc-palette-foregroundSecondary) 2%
-              )
-    !important;
-
+      var(--arc-palette-foregroundPrimary),
+      var(--arc-palette-foregroundSecondary) 2%
+    ) !important;
 }
 .docs-grille-gm3 .trix-palette .goog-toolbar-menu-button-hover, 
 .docs-grille-gm3.docs-gm #docs-align-palette .goog-toolbar-button-hover, 
@@ -93,22 +81,11 @@
 .docs-grille-gm3.docs-gm .docs-main-toolbars .goog-toolbar-button-hover, 
 .docs-grille-gm3.docs-gm .docs-main-toolbars .goog-toolbar-menu-button-hover, 
 .docs-grille-gm3.docs-gm .docs-toolbar-zoom-combobox.goog-toolbar-combo-button-hover
-{ /*  hover  */
-  /*
-  background: color-mix(in srgb,
-                color-mix(in srgb, 
-                  var(--arc-palette-foregroundPrimary), 
-                  var(--arc-palette-foregroundSecondary)
-                ),
-                #ffffff 60%
-              )
-    !important;
-  */
+{ /* hover */
   background: color-mix(in srgb, 
-                var(--arc-palette-foregroundPrimary), 
-                var(--arc-palette-foregroundSecondary) 20%
-              )
-    !important;
+      var(--arc-palette-foregroundPrimary), 
+      var(--arc-palette-foregroundSecondary) 20%
+    ) !important;
 
 }
 .docs-grille-gm3 .docs-main-toolbars .goog-toolbar-button.goog-toolbar-button-checked, 
@@ -116,117 +93,112 @@
 .docs-grille-gm3.docs-gm .clean-palette .goog-palette-cell-selected, 
 .docs-grille-gm3.docs-gm .trix-palette .goog-palette-cell-selected 
 { /* selected */
-  /*
-    background: color-mix(in srgb,
-                var(--arc-palette-foregroundSecondary),
-                #ffffff 60%
-              )
-    !important;
-  */
   background: color-mix(in srgb,
-                var(--arc-palette-foregroundSecondary),
-                var(--arc-palette-foregroundPrimary) 40%
-              )
-    !important;
+      var(--arc-palette-foregroundSecondary),
+      var(--arc-palette-foregroundPrimary) 40%
+    ) !important;
 }
 
-/* HIGHLIGHT */
+/*  menu  */
 .docs-gm .goog-menuitem-highlight,
 .docs-gm .goog-menuitem-hover, 
 .docs-gm .goog-control-hover:not(.waffle-filterbox-with-condition),
 .docs-gm .goog-control-open:not(.waffle-filterbox-with-condition),
 .docs-gm .goog-control-focused:not(.waffle-filterbox-with-condition),
 .docs-gm .docs-titlebar-badge-selected
-{
+{ /* highlight/hover */
   background: color-mix(in srgb,
-                color-mix(in srgb, 
-                  var(--arc-palette-foregroundPrimary), 
-                  var(--arc-palette-foregroundSecondary)
-                ),
-                #ffffff 60%
-              )
-    !important;
+      #ffffff 60%,
+      color-mix(in srgb, 
+        var(--arc-palette-foregroundPrimary), 
+        var(--arc-palette-foregroundSecondary)
+      )
+    ) !important;
 }
 
 /* fix document status highlight */
 .docs-grille .docs-titlebar-badge .docs-save-indicator-icon:hover {
-  background: none !important;
+  background: none !important; /* you get a weird grey circle on top of the square otherwise,,, */
 }
 
-/*  HELP TEXTBOX COLOR  */
+
+/*  menu > help  */
 .docs-omnibox-input.jfk-textinput {
   background: color-mix(in srgb,
-                color-mix(in srgb, 
-                  var(--arc-palette-foregroundPrimary), 
-                  var(--arc-palette-foregroundSecondary)
-                ),
-                #ffffff 60%
-              )
-    !important;
+      #ffffff 60%,
+      color-mix(in srgb, 
+        var(--arc-palette-foregroundPrimary), 
+        var(--arc-palette-foregroundSecondary)
+      )
+    ) !important;
 }
-.docs-omnibox-input.jfk-textinput:active, .docs-omnibox-input.jfk-textinput:focus {
+.docs-omnibox-input.jfk-textinput:active, 
+.docs-omnibox-input.jfk-textinput:focus 
+{ /* white on focus, active*/ 
   background: #ffffff !important;
   box-shadow: 0 1px 6px var(--arc-palette-hover);
 }
 
-/*  comment, show more color  */
-.docs-grille-gm3 .docos-anchoreddocoview.docos-docoview-tesla-conflict:hover .docos-show-more, .docs-grille-gm3 .docos-anchoreddocoview:hover .docos-replyview-first .docos-show-more, 
-.docs-grille-gm3 .docos-anchoreddocoview:hover .docos-show-less, .docs-grille-gm3 .docos-anchoreddocoview:hover .docos-show-more,
-.docs-grille-gm3 .docos-anchoreddocoview .docos-show-less, .docs-grille-gm3 .docos-anchoreddocoview .docos-show-more, .docs-grille-gm3 .docos-replyview-first .docos-show-more,
-.docs-grille-gm3 .docos-anchoreddocoview, .docs-grille-gm3 .docos-anchoreddocoview .docos-anchoredreplyview, .docs-grille-gm3 .docos-anchoreddocoview-input-pane,
+
+/*  comment  */
+.docs-grille-gm3 .docos-anchoreddocoview.docos-docoview-tesla-conflict:hover .docos-show-more, 
+.docs-grille-gm3 .docos-anchoreddocoview:hover .docos-replyview-first .docos-show-more, 
+.docs-grille-gm3 .docos-anchoreddocoview:hover .docos-show-less, 
+.docs-grille-gm3 .docos-anchoreddocoview:hover .docos-show-more,
+.docs-grille-gm3 .docos-anchoreddocoview .docos-show-less, 
+.docs-grille-gm3 .docos-anchoreddocoview .docos-show-more, 
+.docs-grille-gm3 .docos-replyview-first .docos-show-more,
+.docs-grille-gm3 .docos-anchoreddocoview, 
+.docs-grille-gm3 .docos-anchoreddocoview .docos-anchoredreplyview, 
+.docs-grille-gm3 .docos-anchoreddocoview-input-pane,
 .docs-grille-gm3 .docos-showrepliesbutton-collapsed-internal-container {
   background: var(--arc-palette-foregroundPrimary) !important;
 }
-/*  link, show more text color  */
-.docs-grille-gm3 .docos-anchoredreplyview .docos-anchoredreplyview-body a,
-.docs-grille-gm3 .docos-show-less, .docs-grille-gm3 .docos-show-more,
-.docs-grille-gm3 .docos-anchoreddocoview.docos-docoview-active .docos-showrepliesbutton-collapsed-internal, .docs-grille-gm3 .docos-anchoreddocoview:hover .docos-showrepliesbutton-collapsed-internal {
-  color: rgba(var(--arc-palette-foregroundTertiary), 0.08);
-  !important;
+
+/*  comment reply button  */
+.docs-grille-gm3 .docos.docs-gm .jfk-button.jfk-button-action {
+  background: color-mix(in srgb, 
+      var(--arc-palette-focus), 
+      color-mix(in srgb, 
+        var(--arc-palette-foregroundPrimary), 
+        var(--arc-palette-foregroundSecondary)
+      )
+    ) !important;
+  color: #ffffff !important;
 }
 
+/*  comment cancel button  */
+.docs-grille-gm3 .docos.docs-gm .jfk-button.jfk-button-standard {
+  color: color-mix(in srgb, 
+      var(--arc-palette-foregroundSecondary), 
+      var(--arc-palette-foregroundTertiary)
+    ) !important;
+}
+
+/* comment link color */
+.docs-grille-gm3 .docos-show-less, .docs-grille-gm3 .docos-show-more,
+.docs-grille-gm3 .docos-anchoredreplyview .docos-anchoredreplyview-body a {
+  color: color-mix(in srgb, 
+      var(--arc-palette-foregroundSecondary), 
+      var(--arc-palette-foregroundTertiary)
+    ) !important;
+}
+
+/* "show more" text color */
+.docs-grille-gm3 .docos-anchoreddocoview.docos-docoview-active .docos-showrepliesbutton-collapsed-internal, 
+.docs-grille-gm3 .docos-anchoreddocoview:hover .docos-showrepliesbutton-collapsed-internal {
+  color: color-mix(in srgb, 
+      var(--arc-palette-foregroundSecondary), 
+      var(--arc-palette-foregroundTertiary)
+    ) !important;
+}
+/* "show more replies" hover background */
 .docs-grille-gm3 .docos-anchoreddocoview .docos-showrepliesbutton-collapsed-internal:active, 
 .docs-grille-gm3 .docos-anchoreddocoview .docos-showrepliesbutton-collapsed-internal:focus,
 .docs-grille-gm3 .docos-anchoreddocoview .docos-showrepliesbutton-collapsed-internal:hover{
-  background: var(--arc-palette-focus);
+  background: color-mix(in srgb, 
+      #ffffff, 
+      var(--arc-palette-hover)
+    ) !important;
 }
-
-/*
-.docs-title-widget {
-  font-family: 'Roboto Slab', Google Sans, Roboto, sans-serif !important;
-  font-weight: 400 !important;
-}
-*/
-
-/*
-.docs-grille-gm3 #docs-align-palette .goog-toolbar-button, .docs-grille-gm3 .docs-main-toolbars .goog-toolbar-button, .docs-grille-gm3 .docs-main-toolbars .goog-toolbar-combo-button, .docs-grille-gm3 .docs-main-toolbars .goog-toolbar-menu-button, .docs-grille-gm3 .trix-palette .goog-toolbar-menu-button {
-  background: color-mix(in srgb,
-                  color-mix(in srgb, 
-                            var(--arc-palette-hover), 
-                            var(--arc-palette-foregroundPrimary)),
-                  #ffffff)
-    !important;
-}
-
-.goog-toolbar-button-hover {
-  background: color-mix(in srgb,
-                  color-mix(in srgb, 
-                            var(--arc-palette-hover), 
-                            var(--arc-palette-foregroundSecondary)),
-                  #ffffff)
-    !important;
-}
-
-.docs-grille-gm3 .docs-main-toolbars .goog-toolbar-button.goog-toolbar-button-checked {
-  background: color-mix(in srgb,
-                  color-mix(in srgb, 
-                            var(--arc-palette-hover), 
-                            var(--arc-palette-foregroundTertiary)),
-                  #ffffff)
-    !important;
-}
-
-
-*/
-
 
