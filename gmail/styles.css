@@ -1,0 +1,131 @@
+/*  compose button  */
+.WR .z0>.L3 {
+  color: #ffffff !important;
+  background: color-mix(in srgb, 
+                        var(--arc-palette-focus), 
+                        color-mix(in srgb, var(--arc-palette-foregroundPrimary), var(--arc-palette-foregroundSecondary))
+    )
+  !important;
+  background-clip: padding-box;
+  border: 3px solid !important; 
+  border-color: color-mix(in srgb, 
+                        #ffffffaa,  s
+                        color-mix(in srgb, 
+                          var(--arc-palette-focus), 
+                          color-mix(in srgb, var(--arc-palette-foregroundPrimary), var(--arc-palette-foregroundSecondary))
+                        )
+  )
+  !important;
+}
+.WR:not(.bhZ) .z0>.L3::before,
+.WR.bym .z0>.L3::before,
+.WR .z0>.L3::before, .WR.anZ .z0>.L3::before { /* icon */
+  filter: contrast(2) grayscale(1) invert(1) !important;
+  -webkit-filter: contrast(2) grayscale(1) invert(1) !important;
+}
+.WR .z0>.L3:hover { /* change color on hover */
+  background: var(
+    --arc-background-gradient-color1, 
+    color-mix(in srgb, var(--arc-palette-minContrastColor), var(--arc-palette-foregroundSecondary))
+  ) 
+  !important;
+  border-color: color-mix(in srgb, 
+                        #ffffffaa, 
+                        var(
+                          --arc-background-gradient-color1, 
+                          color-mix(in srgb, var(--arc-palette-minContrastColor), var(--arc-palette-foregroundSecondary))
+                        ) 
+  )
+  !important;
+
+}
+
+/* search mail */
+.gb_Ze {
+  background: color-mix(in srgb,
+                  color-mix(in srgb, 
+                            var(--arc-palette-hover), 
+                            var(--arc-palette-foregroundPrimary)),
+                  #ffffff
+  )
+  !important;
+}
+.gb_Ze.gb_0e { /* on input */
+  background:  #ffffff !important;
+}
+
+.TK .TO {
+  border: 2px solid transparent !important; 
+}
+
+tr.x7 {
+  /*
+  color-mix(in srgb, var(--arc-palette-foregroundPrimary), var(--arc-palette-foregroundSecondary))
+  */
+  background: 
+    color-mix(in srgb,
+      var(--arc-palette-hover), 
+      color-mix(in srgb, 
+        var(--arc-palette-foregroundPrimary),
+        #ffffff
+      )
+    )
+  !important;
+}
+
+/* active tab */
+.TK .TO.nZ:active, .TK .TO.ol:active, 
+.TK .TO.nZ, .TK .TO.ol, .byl .TK .nZ.aBP, .byl .TK .nZ.aS3, .byl .TK .nZ.aS4, .byl .TK .nZ.aS5, .byl .TK .nZ.aS6 {
+  /*
+  background: color-mix(in srgb, 
+                        color-mix(in srgb, var(--arc-palette-hover), var(--arc-palette-focus)), 
+                        var(--arc-palette-foregroundSecondary))
+  !important;
+  */
+  background: color-mix(in srgb,
+                  color-mix(in srgb, 
+                            var(--arc-palette-focus), 
+                            var(--arc-palette-foregroundSecondary)),
+                  #ffffff)
+    !important;
+  border: 2px solid !important; 
+  border-color: color-mix(in srgb,
+                  color-mix(in srgb, 
+                            var(--arc-palette-focus), 
+                            var(--arc-palette-foregroundPrimary)),
+                  #ffffff)
+  !important;
+  border-left: none !important;
+}
+/* hover tab */
+.TO.NQ, .n6 .ah9:hover, .n6 .ah9.aiu:hover, .n6 .ah9:focus, 
+.TK .TO:active, .n6 .ah9.aiu:active,
+.CL.Q7:hover, .CL.Wj:hover, .CL.Q7.NQ, .CL.Wj.NQ,
+.J-N-JT, .J-N-JW {
+  background: color-mix(in srgb,
+                  color-mix(in srgb, 
+                            var(--arc-palette-hover), 
+                            var(--arc-palette-foregroundPrimary)),
+                  #ffffff
+  )
+  !important;
+}
+/*  click more  */
+.pM::before {
+  background: color-mix(in srgb,
+                  color-mix(in srgb, 
+                            var(--arc-palette-focus), 
+                            var(--arc-palette-foregroundSecondary)),
+                  #ffffff55)
+    !important;
+}
+
+/* recently clicked mail, active inbox tab */
+.zA>.PE.PF::before, .J-KU-KO.aAy:before { 
+  background: color-mix(in srgb, 
+                        var(--arc-palette-focus), 
+                        color-mix(in srgb, var(--arc-palette-foregroundPrimary), var(--arc-palette-foregroundSecondary))
+    )
+  !important;
+}
+
