@@ -1,21 +1,26 @@
+.sBbkle {
+  height: auto !important;
+}
+
 .nnav {
   margin-top: 8px;
 }
 
-.nnav-link {
-  height: 35px !important; 
+.smaller {
+  --link-height: 40px;
+  --link-height-small: 33px;
 }
 
-.nnav.nnav-link {
-  margin-top: 2.5px;
+.smaller .nnav-link {
+  height: var(--link-height-small) !important; 
 }
 
-.nnavico {
-  height: 12px;
-  width: auto;
-  margin-right: 6px;
+.smaller:not(.nnav) .nnav-link {
+  margin-top: calc((var(--link-height) - var(--link-height-small)) / 2) !important;
+  margin-bottom: calc((var(--link-height) - var(--link-height-small)) / 2) !important;
 }
 
-.sBbkle {
-  height: auto !important;
+.smaller .nnavico {
+  height: 12px !important;
+  width: auto !important;
 }

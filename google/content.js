@@ -1,18 +1,15 @@
 const q = queryParams().q.replace(/\+/g, ' ');
 let query = queryParams().q.replace(/\+/g, ' ');
 
-const nav = document.createElement('div');
-document.querySelector('.nfdoRb').parentElement.appendChild(nav);
-nav.classList.add('nfdoRb');
-nav.classList.add('nnav');
+const smaller = false;
+const same_row = true;
 
-console.log(`[QUERY]\t${query}`);
+let nav = same_row ? document.querySelector('.nfdoRb') : navRow();
 
 if (q.includes("site:")) {
   query_tokens = query.split(" ");
   qs = query_tokens.filter(q => !q.includes("site:"));  
   query = qs.join(" ");
-  console.log(`query\t${query}`);
 }
 
 if (!q.includes("site:wikipedia.org")) {
@@ -31,6 +28,7 @@ if (q.includes("site:")) {
 }
 
 
+
 function queryParams() {
   var query = location.search.substr(1);
   var result = {};
@@ -41,12 +39,22 @@ function queryParams() {
   return result;
 }
 
+function navRow() {
+  let nav = document.createElement('div');
+  document.querySelector('.nfdoRb').parentElement.appendChild(nav);
+  let classes = ['nfdoRb', 'nnav'];
+  classes.forEach(c => nav.classList.add(c));
+  if (smaller) nav.classList.add('smaller');
+
+  return nav;
+}
+
 function createLink(icon, name, url) {
   const a = document.createElement('a');
   a.setAttribute('href', url);
-  a.classList.add('zItAnd');
-  a.classList.add('FOU1zf');
-  a.classList.add('GMT2kb');
+  let classes = ['zItAnd', 'FOU1zf', 'GMT2kb', 'nnav-link'];
+  classes.forEach(c => a.classList.add(c));
+  if (smaller) nav.classList.add('smaller');
 
   const d = document.createElement('div');
   d.classList.add('O3S9Rb');
@@ -70,10 +78,12 @@ function textIcon(symbol) {
 function imgIcon(img) {
   const icon = document.createElement('img');
   icon.src = img;
-  icon.classList.add('mUKzod');
+  let classes = ['mUKzod', 'nnavico'];
+  classes.forEach(c => icon.classList.add(c));
+
   icon.setAttribute("aria-hidden", "true");
   icon.setAttribute("focusable", "false");
-
+  console.log(img);
   return icon;
 }
 
@@ -81,7 +91,6 @@ function addLink(symbol, name, url) {
   const link = createLink(symbol, name, url);
   console.log(link);
   console.log(document.querySelector('.nfdoRb'));
-  // document.querySelector('.nfdoRb').appendChild(link);
   nav.appendChild(link);
 }
 
