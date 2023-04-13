@@ -42,8 +42,8 @@ function queryParams() {
 function navRow() {
   let nav = document.createElement('div');
   document.querySelector('.nfdoRb').parentElement.appendChild(nav);
-  let classes = ['nfdoRb', 'nnav'];
-  classes.forEach(c => nav.classList.add(c));
+  ['nfdoRb', 'nnav'].forEach(c => nav.classList.add(c));
+
   if (smaller) nav.classList.add('smaller');
 
   return nav;
@@ -52,8 +52,8 @@ function navRow() {
 function createLink(icon, name, url) {
   const a = document.createElement('a');
   a.setAttribute('href', url);
-  let classes = ['zItAnd', 'FOU1zf', 'GMT2kb', 'nnav-link'];
-  classes.forEach(c => a.classList.add(c));
+  ['zItAnd', 'FOU1zf', 'GMT2kb', 'nnav-link'].forEach(c => a.classList.add(c));
+
   if (smaller) nav.classList.add('smaller');
 
   const d = document.createElement('div');
@@ -78,19 +78,14 @@ function textIcon(symbol) {
 function imgIcon(img) {
   const icon = document.createElement('img');
   icon.src = img;
-  let classes = ['mUKzod', 'nnavico'];
-  classes.forEach(c => icon.classList.add(c));
-
+  ['mUKzod', 'nnavico'].forEach(c => icon.classList.add(c));
   icon.setAttribute("aria-hidden", "true");
   icon.setAttribute("focusable", "false");
-  console.log(img);
   return icon;
 }
 
 function addLink(symbol, name, url) {
   const link = createLink(symbol, name, url);
-  console.log(link);
-  console.log(document.querySelector('.nfdoRb'));
   nav.appendChild(link);
 }
 
