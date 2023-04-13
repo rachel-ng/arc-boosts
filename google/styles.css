@@ -2,7 +2,20 @@
   margin-top: 8px;
 }
 
+.nnav-link {
+  height: 35px !important; 
+}
+
+.nnav.nnav-link {
+  margin-top: 2.5px;
+}
+
+.nnavico {
+  height: 12px;
+  width: auto;
+  margin-right: 6px;
+}
+
 .sBbkle {
   height: auto !important;
 }
-
