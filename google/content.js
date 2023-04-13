@@ -1,10 +1,10 @@
-const q = queryParams().q.replace(/\+/g, ' ');
-let query = queryParams().q.replace(/\+/g, ' ');
-
+const same_row = false;
 const smaller = false;
-const same_row = true;
 
 let nav = same_row ? document.querySelector('.nfdoRb') : navRow();
+
+const q = queryParams().q.replace(/\+/g, ' ');
+let query = queryParams().q.replace(/\+/g, ' ');
 
 if (q.includes("site:")) {
   query_tokens = query.split(" ");
