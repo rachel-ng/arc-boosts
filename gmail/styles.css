@@ -18,12 +18,6 @@
       )
     ) !important;
 }
-.WR:not(.bhZ) .z0>.L3::before,
-.WR.bym .z0>.L3::before,
-.WR .z0>.L3::before, .WR.anZ .z0>.L3::before { /* icon */
-  filter: contrast(2) grayscale(1) invert(1) !important;
-  -webkit-filter: contrast(2) grayscale(1) invert(1) !important;
-}
 .WR .z0>.L3:hover { /* change color on hover */
   background: var(--arc-background-gradient-color1, 
       color-mix(in srgb, 
@@ -40,18 +34,15 @@
         )
       ) 
     ) !important;
-
+}
+.WR:not(.bhZ) .z0>.L3::before,
+.WR.bym .z0>.L3::before,
+.WR .z0>.L3::before, .WR.anZ .z0>.L3::before { /* icon */
+  filter: contrast(2) grayscale(1) invert(1) !important;
+  -webkit-filter: contrast(2) grayscale(1) invert(1) !important;
 }
 
 /* search mail */
-.gb_Ze {
-  background: color-mix(in srgb,
-      color-mix(in srgb, 
-        var(--arc-palette-hover), 
-        var(--arc-palette-foregroundPrimary)),
-      #ffffff
-    ) !important;
-}
 .gb_Ze.gb_0e { /* on input */
   background:  #ffffff !important;
 }
@@ -123,5 +114,22 @@ tr.x7 {
         var(--arc-palette-foregroundSecondary)
       )
     ) !important;
+}
+
+// arc-y gmail logo svg fill
+img.gb_Jc #4285f4 {
+  fill: var(--arc-background-gradient-color1, color-mix(in srgb, var(--arc-palette-backgroundExtra), var(--arc-palette-focus))) !important;
+}
+img.gb_Jc #34a853 {
+  fill: var(--arc-background-gradient-overlay-color1, var(--arc-palette-foregroundSecondary)) !important;
+}
+img.gb_Jc #fbbc04 {
+  fill: color-mix(in srgb, var(--arc-palette-foregroundPrimary), var(--arc-palette-foregroundSecondary)) !important;
+}
+img.gb_Jc #ea4335 { 
+  fill: var(--arc-palette-foregroundTertiary) !important;
+}
+img.gb_Jc #c5221f {
+  fill: var(--arc-palette-background) !important;
 }
 
