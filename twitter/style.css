@@ -1,0 +1,30 @@
+[role="tablist"],
+[role="heading"],
+[aria-label="Primary"],
+[role="menu"] [data-testid="Dropdown"] {
+  text-transform: lowercase;
+}
+
+[data-testid="SideNav_NewTweet_Button"],
+[data-testid="tweetButtonInline"],
+[data-testid="toolBar"] [data-testid="tweetButton"] span {
+  text-transform: lowercase;
+}
+
+/* search bar */
+[data-testid="SearchBox_Search_Input"],
+[data-testid="typeaheadRecentSearchesHeader"] {
+  text-transform: lowercase;
+}
+
+input[data-testid="SearchBox_Search_Input"] {
+  width: 100% !important;
+}
+
+.r-1b43r93, .r-1yzf0co {
+  text-transform: lowercase;
+}
+
+.searchFilters {
+  text-transform: lowercase;
+}
