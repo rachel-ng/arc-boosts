@@ -1,16 +1,18 @@
-calendars = ["Work", "Routine"]
+// insert jslog email for calendar 
+calendars = {
+  "Work": "work@group.calendar.google.com",
+  "Routine": "routine@group.calendar.google.com",
+}
 
 window.addEventListener("load", function() { 
-  calendars.forEach(c => (toggle_calendar(c)))
-});
-
-window.navigation.addEventListener('navigate', function() {
-  calendars.forEach(c => (toggle_calendar(c)))
+  Object.entries(calendars).forEach(c => (toggle_calendar(c[0])))
+  Object.entries(calendars).forEach(c => (opaque_events(c[1])))
 });
 
 MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 var observer = new MutationObserver(function(mutations, observer) {
-  calendars.forEach(c => (toggle_calendar(c)))
+  Object.entries(calendars).forEach(c => (toggle_calendar(c[0])))
+  Object.entries(calendars).forEach(c => (opaque_events(c[1])))
 });
 
 observer.observe(document, {
@@ -36,4 +38,13 @@ function toggle_calendar(calendar, debug=false) {
       cal.click();
     }
   }
+}
+
+function opaque_events(calendar, opacity=0.5) {
+  document.querySelectorAll(`div[jslog*='${calendar}']`).forEach((i) => { 
+    let rgb = i.style.backgroundColor; 
+    rgb = rgb.replace("rgb","rgba").replace(")", `, ${opacity})`); 
+    i.style.backgroundColor = rgb; 
+  })
+
 }
