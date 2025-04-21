@@ -1,7 +1,12 @@
-// insert jslog email for calendar 
 calendars = {
-  "Work": "work@group.calendar.google.com",
-  "Routine": "routine@group.calendar.google.com",
+  "Work": {
+    "opacity": 0.5, 
+    "email": "calendars@group.calendar.google.com"
+  },
+  "Routine": {
+    "opacity": 0.5, 
+    "email": "routine@group.calendar.google.com"
+  },
 }
 
 window.addEventListener("load", function() { 
@@ -40,10 +45,10 @@ function toggle_calendar(calendar, debug=false) {
   }
 }
 
-function opaque_events(calendar, opacity=0.5) {
-  document.querySelectorAll(`div[jslog*='${calendar}']`).forEach((i) => { 
+function opaque_events(calendar) {
+  document.querySelectorAll(`div[jslog*='${calendar["email"]}']`).forEach((i) => { 
     let rgb = i.style.backgroundColor; 
-    rgb = rgb.replace("rgb","rgba").replace(")", `, ${opacity})`); 
+    rgb = rgb.replace("rgb","rgba").replace(")", `, ${calendar["opacity"]})`); 
     i.style.backgroundColor = rgb; 
   })
 
